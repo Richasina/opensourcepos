@@ -26,12 +26,12 @@ class Database extends Config
 	 */
 	public array $default = [
 		'DSN' => '',
-		'hostname' => 'localhost',
-		'username' => 'admin',
-		'password' => 'pointofsale',
-		'database' => 'ospos',
+		'hostname' => getenv('DB_HOST'),
+    	'username' => getenv('DB_USERNAME'),
+    	'password' => getenv('DB_PASSWORD'),
+    	'database' => getenv('DB_DATABASE'),
 		'DBDriver' => 'MySQLi',
-		'DBPrefix' => 'ospos_',
+		'DBPrefix' => '',
 		'pConnect' => false,
 		'DBDebug' => (ENVIRONMENT !== 'production'),
 		'charset' => 'utf8mb4',
@@ -58,10 +58,10 @@ class Database extends Config
 	 */
 	public array $tests = [
 		'DSN' => '',
-		'hostname' => 'localhost',
-		'username' => 'admin',
-		'password' => 'pointofsale',
-		'database' => 'ospos',
+		'hostname' => getenv('DB_HOST'),
+    	'username' => getenv('DB_USERNAME'),
+    	'password' => getenv('DB_PASSWORD'),
+    	'database' => getenv('DB_DATABASE'),
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => 'ospos_',
 		'pConnect' => false,
